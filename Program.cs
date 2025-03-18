@@ -136,8 +136,43 @@ namespace OldPhonePad
             }
         }
 
+        //Test Case
+        public static void OldPhonePadTests()
+        {
+            Console.WriteLine("Running test cases...");
+
+            //Testing basic input
+            string testcase_1 = OldPhonePad("2#");
+            Console.WriteLine($"Test case 1: Input '2#' -> Output '{testcase_1}' [Expected: 'a']");
+
+            //Testing multiple characters
+            string testcase_2 = OldPhonePad("2 22#");
+            Console.WriteLine($"Test case 2: Input '2 22#' -> Output '{testcase_2}' [Expected: 'ab']");
+
+            //Testing for pauses
+            string testcase_3 = OldPhonePad("2 2#");
+            Console.WriteLine($"Test case 3: Input '2 2#' -> Output '{testcase_3}' [Expected: 'aa']");
+
+            //Testing for delete
+            string testcase_4 = OldPhonePad("22*2#");
+            Console.WriteLine($"Test case 4: Input '22*2#' -> Output '{testcase_4}' [Expected: 'a']");
+            
+            //Testing for actual word
+            string testcase_5 = OldPhonePad("4433555 555666#");
+            Console.WriteLine($"Test case 5: Input '4433555 555666#' -> Output '{testcase_5}' [Expected: 'hello']");
+
+            //Testing for actual message
+            string testcase_6 = OldPhonePad("84426655099966688033366677709996668877708444633#");
+            Console.WriteLine($"Test case 5: Input '84426655099966688033366677709996668877708444633#' -> Output '{testcase_6}' [Expected: 'thank you for your time']");
+
+            Console.WriteLine("Tests completed!");
+
+            Console.WriteLine("------------------------------------------------------------------------------------------------------------------------");
+        }
+
         public static void Main(string[] args)
         {
+            OldPhonePadTests();
             visualKeyPad();
             while (true)
             {
