@@ -25,4 +25,4 @@ In the mobile phone key pad, you need to press the same number keys multiple tim
 
 ## Requirements
 
-- .NET Standard 2.0 or higher
+- .NET Standard 8.0
